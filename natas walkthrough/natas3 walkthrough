@@ -1,0 +1,24 @@
+This challenge is accessiable using following link: http://natas3.natas.labs.overthewire.org/
+
+Let's Start 
+
+As always the webpage was loaded and there was this 
+
+I tried to inspect view-source code but found nothing like html comment with password or a directory hint like in previous one,
+but instead found this comment <!-- No more information leaks!! Not even Google will find it this time... -->
+
+If you are smart enough you will have already got the hint but i didn't understand it at first glance so i went for walkthrough 
+and there i found that we need to look into robots.txt 
+
+Actually i know what robots.txt does but I haven't thought about it, that's why in hacking it all about out of the box thinking. 
+Here what it does if you don't know you can set allow and disallow values for crawlers so they can know which pages are authorized to crawl.
+
+So Here's what I found in robots.txt. The /s3cr3t/ url was disallowed.
+
+User-agent: *
+Disallow: /s3cr3t/
+
+So now I searched for "http://natas3.natas.labs.overthewire.org/s3cr3t/" and found index of /s3cr3t where users.txt file was waiting to be found out.
+
+And there you go, you are just one step away to have a password for next level. Go find out!!!
+
