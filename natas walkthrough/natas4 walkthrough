@@ -42,3 +42,9 @@ There are many resources online, to read up on HTTP and its headers, for example
 
 I hope you have understand it but it was hard for me, so I just focused on the word "Referer". 
 And searched on google for what it does and found a simple explaination on it 
+
+{The "Referer" in the network tab of the developer tools is an HTTP header that indicates the URL of the web page from which a request originated. 
+It helps servers identify where users are coming from when they click links to access resources.}
+
+you can also refer to  https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Referer for better explaination:
+
