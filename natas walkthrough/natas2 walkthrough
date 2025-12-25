@@ -1,0 +1,17 @@
+Access natas2 challenge using http://natas2.natas.labs.overthewire.org/
+
+Following is the result after visiting webpage
+
+
+As usual i inspected the view-source code but found no password in html comment tag. I was expecting it again :)
+I have also checked network tab and all other tabs in developer option but found nothing.
+And i was only looking for a long text in page source code and ignored other valuable details like:
+there was a image tag importing a image 
+
+<img src="/files/pixel.png"/>
+
+I completely ignored this finding as it provides a valuable directory structure of stored files or images
+
+So i browsed to the url/files/pixel.png and thought that there could be password inside a image but it wasn't there actually a image was of size 1 x 1 not even visible without microscope
+after that i tried url/files and ther i found two files first our image and then second a users.txt
+After seeing url/files/users.txt i have found a passwords for 6 users and one of them was natas3.
