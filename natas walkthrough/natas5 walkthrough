@@ -1,0 +1,9 @@
+Access natas5 lab using http://natas5.natas.labs.overthewire.org/
+
+Visiting webpage shows "Access disallowed, You are not logged in."
+
+So as usaual i've checked page source code found nothing, also tried robots.txt no file found then tried to add referer in request headers but no success
+then i checked the storage option in developer tab there i found a cookie named logged in set to 0, changed it to 1 and refreshed the browser. 
+And thats it.
+
+The response was Access granted. The password for natas6 is 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
